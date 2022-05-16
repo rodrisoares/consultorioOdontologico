@@ -1,0 +1,578 @@
+*{
+    margin: 0%;
+    list-style: none;
+    text-decoration: none;
+}
+/*border-top-left-radius: 1.7rem;
+border-bottom-right-radius: 1.7rem;*/
+:root{
+    --hue: 202;
+
+    --color-principal: hsl(var(--hue), 89%, 55%);
+    --color-font: hsl(0, 0%, 97%);
+    --color-navation: hsl(var(--hue), 0%, 89%);
+    --color-font-card:hsl(0, 0%, 31%);
+    --color-hover: hsl(var(--hue), 100%, 47%);
+    --backgrond-open-menu:hsl(var(--hue), 33%, 48%);
+    --backgrond-section: hsl(var(--hue), 3%, 93%);
+    --background-servicos: hsl(var(--hue), 96%, 63%);
+    
+    
+    font-size: 62.5%;
+    --nav-height: 7.2rem
+}
+
+.wrapper{
+    width: 37.5rem;
+    margin-inline: auto ;
+    padding-inline: 2.4rem;
+}
+button{
+    cursor: pointer;
+}
+
+h4{
+    font-size: 3.5rem;  
+    margin: 3rem auto;
+    text-transform: uppercase;
+}
+
+img{
+    width: 32.7rem;
+    height: 28.2;
+    border-radius: 7px;
+    object-fit: cover;
+}
+
+a.slogan{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: black;
+}
+
+ a span{
+    color: var(--color-principal);
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    overflow: overlay;
+    overflow-x: hidden;
+
+    font-family:'DM Sans';
+    font-size: 1.6rem;
+    text-align: center;
+    align-items: center;
+}
+
+body.show .slogan{
+    color: var(--color-font);
+}
+body.show .slogan span{
+    color: black;
+}
+
+
+body.show .menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    background: var(--backgrond-open-menu);
+
+    padding-top: var(--nav-height);
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s;
+    display: block;
+}
+
+body.show .slogan,
+body.show .close-menu{
+    position: relative;
+    z-index: 1;
+}
+
+body.show.menu,
+body.show .close-menu{
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+body.show nav{
+    position: fixed;
+}
+
+body.show .button{
+    color: black;
+}
+
+header{
+    margin-top: calc(4.1rem + var(--nav-height));
+    padding: auto 2rem;
+}
+
+header img{
+    width: 34.5rem;
+    height: auto;
+    border-radius: 10px;
+   
+}
+
+nav{
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    height: var(--nav-height);
+    top: 0%;
+    z-index: 100;
+}
+
+nav .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav.scroll{
+    background-color: var(--color-navation);
+}
+
+nav button{
+background: none;
+border: none;
+}
+
+.menu,
+.close-menu{
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+.close-menu path{
+    stroke: var(--backgrond-section);
+}
+
+.open-menu path{
+    stroke: var(--color-principal);
+}
+
+li {
+    margin: 3rem auto;
+    font-size: 2.5rem;
+    font-weight: 500;
+   
+    cursor: pointer;
+}
+
+li a{
+    color: var(--color-font);
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    gap: 2rem;
+}
+.menu .button {
+    background-color: var(--color-font);
+}
+.menu .button a{
+    color: black;
+    font-size: 2rem;
+}
+
+.title{
+    font-size: 3.4rem;
+    line-height: 130%;
+    margin-bottom: 3.5rem;
+}
+
+p{
+    font-size: 1.8rem;
+    line-height: 150%;
+    margin-bottom: 3.2rem;
+}
+
+.button{
+    background-color: var(--color-principal);
+    color: var(--color-font);
+    border:none;
+    border-radius: 4rem;
+    margin: 0 auto 6rem auto;
+    height: 5rem;
+    width: 26.3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.button:hover{
+    background-color: var(--color-hover);
+}
+
+.stats{
+    background-color: var(--backgrond-section);
+    color: rgb(31, 31, 31);
+    width: 31rem;
+    top: -5rem;
+    margin: 0 auto;
+    padding-block: 3rem;
+    box-shadow: 1px 1px 5px rgba(4, 4, 4, 0.155);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.stat h3{
+    font-size: 4.8rem;
+    line-height: 130%;
+    margin-bottom: .4rem;
+}
+
+.stat p{
+    margin: 0%;
+    line-height: 150%;
+    color: var(--color-font-card);
+}
+
+section#servicos{
+    background-color: var(--background-servicos);
+    color: var(--color-font);
+    align-items: center;
+}
+
+section#servicos div.wrapper{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.card h3{
+    margin: 2rem auto;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+    color: black; 
+    margin: 10rem ;
+}
+
+.card{
+    min-width: 32rem;
+    margin: 1rem auto;
+    background-color: var(--color-font);
+    box-shadow: 3px 3px 70px rgba(0, 0, 0, 0.131);
+    border-radius: 0.5rem;
+    text-align: left;
+
+    padding: 2rem;
+}
+ 
+
+.cards p{
+    color: var(--color-font-card);
+    
+}
+#servicos .card circle{
+    fill: var(--color-navation);
+}
+#servicos .card path{
+    stroke: var(--color-principal);
+}
+
+section#sobre{
+    margin: 10rem auto;
+    text-align: left;
+}
+
+.img-section{
+    text-align: center;
+    margin: 5rem auto;
+}
+
+#contato{
+    margin: 10rem auto;
+}
+
+#contato .text,
+#contato .text button{
+    text-align: left;
+    margin: 0;
+   
+}
+
+.text p {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#contato i path{
+    stroke: var(--color-principal);
+}
+
+footer{
+    width: 100vw;
+    height: 22rem;
+    text-align: left;
+    background:var(--backgrond-open-menu);
+
+}
+footer .wrapper{
+    padding-top: 5rem;
+    color: var(--color-font); 
+}
+
+
+footer span{
+    color: var(--color-font);
+}
+footer a{
+    color: var(--color-font);
+}
+
+#BackToTop{
+    position: fixed;
+    bottom: 3rem;
+    right: 2.5rem;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+#BackToTop.open{
+    opacity: 1;
+    visibility: visible;
+}
+
+#BackToTop circle{
+    fill: var(--color-principal);
+}
+
+@media (min-width: 900px){
+body{
+    align-items: center;
+}
+
+.colunaA{
+    grid-area: A;
+}
+
+.colunaB{
+    grid-area: B;
+}
+.wrapper{
+    width: min(110rem, 100%);
+}
+
+.img{
+    top: -5rem;
+}
+
+.text{
+    width: 50rem;
+    gap: 3rem;
+}
+
+.wrapper .slogan{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: black;
+}
+
+.wrapper .slogan span{
+    color: var(--color-principal);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+nav .wrapper *{
+    margin: 0%;
+    padding: 0%;
+    visibility: initial;
+    opacity: initial;
+    font-size: initial;
+    font-weight: initial;
+    position: initial;
+    transform: initial;
+    display: initial;
+    color: initial;
+    background: initial;
+}
+
+
+nav .open-menu,
+nav .close-menu,
+nav .icons{
+    display: none;
+}
+
+nav .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+}
+.menu a.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: var(--color-principal);
+
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    text-transform: uppercase;
+
+    border: 1px  var(--color-principal) solid;
+
+}
+.menu a.button:hover{
+    border: 1px var(--color-principal) solid;
+    color: white;
+}
+
+nav.scroll .menu a.button {
+    border: 1px var(--color-principal) solid;
+    color: rgb(0, 0, 0);
+}
+
+nav.scroll .menu a.button :hover{
+    background-color: rgb(255, 255, 255);
+}
+
+.menu li a{
+ margin-right: 2rem;
+ font-weight: 500;
+}
+
+.menu li a:hover{
+    color:var(--color-principal);
+    position: relative;
+    top: -3px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+header{
+    padding-top: 5rem;
+}
+header h1.title{
+   margin-bottom: 3rem;
+}
+
+header .quebra{
+  display: flex;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+}
+header .stats{
+    width: auto;
+    height: auto;
+    display: grid;
+    flex-direction: row;
+    padding: 3rem 8rem;
+}
+
+header#home .stats .stat + .stat{
+    border-left: 1px solid var(--color-principal);
+}
+
+header div.text{
+    max-width: 58.5rem;
+}
+
+ div.stats {
+    top: initial;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+header .stat{
+margin: 0;
+}
+
+#servicos h2{
+    width: 47rem;
+}
+
+#servicos .card{
+   width: 30rem;
+}
+
+#sobre{
+display: flex;
+margin-bottom: 20rem;
+align-items: center;
+justify-content: center;
+gap: 1rem;
+}
+
+#sobre .text{
+    width: 38rem;
+}
+
+#sobre h2{
+margin-bottom: 3rem;
+}
+
+#sobre img{
+    width: 40rem;
+    height: 40rem;
+    object-fit: cover;
+}
+
+#sobre p{
+    margin-bottom: 0;
+}
+
+footer .wrapper a.slogan span{
+    color: #fff;
+}
+
+}
+
+@media (min-width: 1020px){
+    nav .menu .icons{
+        width: 65%;
+    }
+    .icons {
+       color:red;
+    }
+
+    #sobre{
+        gap: 3.5rem;
+    }
+
+    #sobre img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    #sobre .text{
+        width: 40%;
+    }
+
+}
